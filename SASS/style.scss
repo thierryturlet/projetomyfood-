@@ -1,1 +1,177 @@
-.container-logo{width: 100px; }
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    margin:0px;
+    
+  }
+  
+  header,container-logo 
+   {margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;}
+
+    /*****formulaire de recherche*****/
+
+   .formulaire
+
+   {background-color: rgba(231, 231, 231, 0.962);
+    width:100%;
+    height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+   } 
+   .texte-recherche {
+    border-style: none;
+    border-right: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(231, 231, 231, 0.962);
+    margin-left: 50px;
+    outline: none;
+   }
+   .texte-recherche::placeholder{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.13px;
+    color: black;
+   }
+    
+
+    /*****reservations*****/
+
+    .reservations {
+    background-color: rgba(243, 243, 243, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    
+   .texte-reservations{ 
+    text-align: center;
+    margin-bottom: 20px;
+   
+    h2{ font-size: 24 px;
+    font-weight: 700;
+    margin-bottom: 10px;}
+
+  
+
+    p {
+      font-size: 16px;
+      color: #666666;// Couleur du texte
+    }
+    }
+
+    .button {
+          a {
+              padding: 15px 15px; // Ajustez le padding pour obtenir une taille similaire
+              background: linear-gradient(135deg, #6a11cb, #f740b7);
+              color: white;
+              text-decoration: none;
+              border-radius: 50px; // Arrondi des coins du bouton
+              font-size: 15px; // Taille du texte
+              font-weight: bold;
+              display: inline-block;
+              text-align: center;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Légère ombre pour l'effet de profondeur
+              transition: background 0.3s ease; // Transition pour l'effet au survol
+
+            h3 {margin: 5px;
+              font-size: 15px;} 
+              &:hover {
+                background: linear-gradient(135deg, #b359e6, #ff66cc); // Changement de couleur au survol
+          }
+      }
+    }
+  }
+
+  /*****fonctionnement*****/
+
+  .Fonctionnement {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+
+    .title-Fonctionnement {
+        text-align: start;
+        margin-left: 20px;
+        
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .container-fonctionnement {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .ordercard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 30px 30px 30px 30px;
+        position: relative;
+        padding: 15px;
+        text-align: center;
+        width: 250px;
+        margin: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        background-color: rgba(243, 243, 243, 1);
+        &:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .ordernumber {
+            font-size: 25px;
+            font-weight: 350;
+            color: hsl(270, 14%, 92%); /* Couleur violette */
+            margin-bottom: 15px;
+            margin-right: 10px;
+            border: solid 1px #6a11cb ;
+            border-radius: 50%;
+            width: 35px; // largeur du cercle
+            height: 35px;
+            background-color:#6a11cb ;
+        }
+
+        .fa-store {
+            font-size: 40px;
+            color: #6a11cb;
+            margin-bottom: 15px;
+        }
+
+        .orderText {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+        }
+    }
+}
+   /*****restaurants*****/
+
+   .title-restaurant{ margin-left: 20px;}
+
+   .card-restaurant{ 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+   }
