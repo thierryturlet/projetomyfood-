@@ -1,0 +1,51 @@
+
+.menu{margin: 20px;
+    h3 {
+      font-size: 1.2rem;
+      font-weight:300;
+      margin-bottom: 10px;
+      
+    }
+    
+    .menucontent {
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      font-family: Arial, sans-serif;
+      position: relative;
+      
+      .menu_title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin: 0;
+      }
+      
+      .menu_subtitle {
+        font-size: 0.9rem;
+        color: #777;
+        margin: 0;
+        flex: 1;
+        padding-right: 60px;
+        
+      }
+  
+      .euro {
+        font-weight: bold;
+        margin-left: 10px;
+        min-width: 50px; 
+        text-align: right; 
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%); 
+        text-align: right;
+      }
+    }
+  }
+  

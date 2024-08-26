@@ -1,0 +1,77 @@
+/******formulaire*****/
+.texte-recherche {
+    border-style: none;
+    border-right: none;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: rgba(231, 231, 231, 0.962);
+    margin-left: 50px;
+    outline: none;
+   }
+   .texte-recherche::placeholder{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21.13px;
+    color: black;
+   }
+
+   /*****buttons explorer*****/
+   
+   .button {
+    a {
+        padding: 15px 15px; // Ajustez le padding pour obtenir une taille similaire
+        background: linear-gradient(135deg, #6a11cb, #f740b7);
+        color: white;
+        text-decoration: none;
+        border-radius: 50px; // Arrondi des coins du bouton
+        font-size: 15px; // Taille du texte
+        font-weight: bold;
+        display: inline-block;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Légère ombre pour l'effet de profondeur
+        transition: background 0.3s ease; // Transition pour l'effet au survol
+
+      h3 {margin: 5px;
+        font-size: 15px;} 
+        &:hover {
+          background: linear-gradient(135deg, #b359e6, #ff66cc); // Changement de couleur au survol
+    }
+}
+   }
+
+
+   /*****buttonmenu*****/
+
+   .buttonmenu{
+
+    display: flex;
+    justify-content: center;
+    padding-top:20px ;
+    
+
+    a.buttonmenu{
+    background: linear-gradient(135deg, #6a11cb, #f740b7);
+    color: white;
+    text-decoration: none;
+   
+    font-size: 15px; // Taille du texte
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Légère ombre pour l'effet de profondeur
+    transition: background 0.3s ease; // Transition pour l'effet au survol
+    height: 32px;
+    width: 183px;
+    margin-bottom: 45px;
+
+        padding: 10px 30px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 1.1rem;
+
+
+        h3 {
+            margin: 0;
+}
+}
+   }

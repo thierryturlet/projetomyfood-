@@ -1,0 +1,198 @@
+* {
+    font-family: "Roboto", sans-serif;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  body {
+    margin:0px;
+    
+  }
+
+  
+    /*****formulaire de recherche*****/
+
+    .formulaire
+
+    {background-color: rgba(231, 231, 231, 0.962);
+     width:100%;
+     height:50px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-right: 15px;
+    } 
+
+    /*****reservations*****/
+
+    .reservations {
+        background-color: rgba(243, 243, 243, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 3rem;
+        
+       .texte-reservations{ 
+        text-align: center;
+        margin-bottom: 20px;
+       
+        h2{ font-size: 24 px;
+        font-weight: 700;
+        margin-bottom: 10px;}
+    
+      
+    
+        p {
+          font-size: 16px;
+          color: #666666;// Couleur du texte
+        }
+        }
+    }
+
+    /*****fonctionnement*****/
+
+  .Fonctionnement {
+    padding: 20px 0px;
+    background-color: #f9f9f9;
+
+    .title-Fonctionnement {
+        text-align: start;
+        margin-left: 20px;
+        
+        font-weight: bold;
+        margin-bottom: 40px;
+        color: #333;
+    }
+  }
+
+  .container-fonctionnement {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+  .ordercard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 30px 30px 30px 30px;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    width: 250px;
+    margin: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(243, 243, 243, 1);
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+
+    .ordernumber {
+        font-size: 25px;
+        font-weight: 350;
+        color: hsl(270, 14%, 92%); /* Couleur violette */
+        margin-bottom: 15px;
+        margin-right: 10px;
+        border: solid 1px #6a11cb ;
+        border-radius: 50%;
+        width: 35px; // largeur du cercle
+        height: 35px;
+        background-color:#6a11cb ;
+        position: relative;
+        right:40px ;
+    
+     :nth-child(2) {
+      position: relative;
+      top: 10px; 
+      left:-45px; 
+    }
+  }
+
+    .fa-store {
+        font-size: 20px;
+        color: #6a11cb;
+        margin-bottom: 10px;
+        position: relative;
+        right:20px ;
+
+      
+    } 
+    .fa-solid.fa-list{
+      font-size: 20px;
+      color:#666666 ;
+      margin-bottom: 10px;
+      position: relative;
+      right:20px ;
+     
+     
+    }
+
+    .fa-solid.fa-mobile-screen-button{
+      font-size: 20px;
+      color: #666666;
+      margin-bottom: 10px;
+      position: relative;
+      right:15px ;
+
+    
+      
+    }
+    .orderText {
+        font-size: 15px;
+        color: #333;
+        margin-top: 10px;
+    }
+}
+
+
+     /*****restaurantacceuil*****/
+  
+     .restaurants{
+    background-color: rgba(243, 243, 243, 1);
+    padding-bottom: 50px;
+  }
+  .title-restaurant{ margin:0;
+    padding: 1em;}
+     
+     a {
+      text-decoration: none;
+     }
+
+     
+     /*****restaurantmenu*****/
+
+    .presentation_restaurant
+    {img{ 
+      width: 100%;
+      height:280px;
+      object-fit: cover;
+      
+    }
+ }
+
+    .menu_restaurant
+    { background-color: rgba(243, 243, 243, 1);
+      border-top-right-radius: 35px;
+      border-top-left-radius: 35px;
+      padding-top: 15px;
+      position: relative;
+      top: -33px;
+     }
+    h1 {
+      font-family: 'Shrikhand';
+      font-weight:900;
+  }
+  
+
+
+  
