@@ -395,6 +395,38 @@ footer ul li:nth-last-child(2) {
   margin-bottom: 10px;
 }
 
+/*******media queries*******/
+@media (min-width: 1024px) {
+  footer {
+    position: relative; /* Assurez-vous que le footer est positionné par rapport à son conteneur */
+    padding: 20px 0; /* Ajoutez un padding si nécessaire */
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /* Centrez les éléments horizontalement */
+    gap: 20px; /* Espacement entre les éléments */
+  }
+  footer ul li:nth-last-child(3) {
+    margin-right: 40px; /* Ajoute de l'espace à droite du troisième dernier élément */
+  }
+  footer .container-logo {
+    position: absolute; /* Positionnement absolu pour placer le logo */
+    top: -12px; /* Positionne le logo à 20px du bas du footer */
+    right: 20px; /* Positionne le logo à 20px de la droite du footer */
+  }
+  footer img {
+    max-width: 100px; /* Ajustez la taille du logo selon vos besoins */
+    height: auto;
+  }
+}
+.footermenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
 /*****footermenu*****/
 .footermenu {
   position: relative;
