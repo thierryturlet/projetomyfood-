@@ -159,7 +159,7 @@ a {
   border-top-left-radius: 35px;
   padding-top: 15px;
   position: relative;
-  top: -33px;
+  margin-top: -30px;
 }
 
 h1 {
@@ -397,6 +397,26 @@ footer ul li:nth-last-child(2) {
 
 /*******media queries*******/
 @media (min-width: 1024px) {
+  .menu_restaurant {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-top: -40px;
+  }
+  .title_restaurant {
+    display: flex;
+    justify-content: center;
+  }
+  .menu h3 {
+    margin-left: 50px;
+  }
+  .menucontent {
+    margin-left: 50px;
+    margin-right: 50px;
+    position: relative;
+  }
+  footer ul li:nth-last-child(3) {
+    padding-right: 10px; /* Ajoute de l'espace à droite du troisième dernier élément */
+  }
   footer {
     position: relative; /* Assurez-vous que le footer est positionné par rapport à son conteneur */
     padding: 20px 0; /* Ajoutez un padding si nécessaire */
@@ -406,6 +426,7 @@ footer ul li:nth-last-child(2) {
     flex-direction: row;
     justify-content: center; /* Centrez les éléments horizontalement */
     gap: 20px; /* Espacement entre les éléments */
+    margin-left: 250px;
   }
   footer ul li:nth-last-child(3) {
     margin-right: 40px; /* Ajoute de l'espace à droite du troisième dernier élément */
@@ -415,11 +436,12 @@ footer ul li:nth-last-child(2) {
     top: -12px; /* Positionne le logo à 20px du bas du footer */
     right: 20px; /* Positionne le logo à 20px de la droite du footer */
   }
-  footer img {
-    max-width: 100px; /* Ajustez la taille du logo selon vos besoins */
-    height: auto;
-  }
 }
+.information {
+  margin-right: 148px;
+  margin-left: 0px;
+}
+
 .footermenu {
   display: flex;
   flex-direction: row;
@@ -430,7 +452,6 @@ footer ul li:nth-last-child(2) {
 /*****footermenu*****/
 .footermenu {
   position: relative;
-  top: -33px;
 }
 
 .menu {
@@ -452,7 +473,12 @@ footer ul li:nth-last-child(2) {
   justify-content: space-between;
   align-items: start;
   font-family: Arial, sans-serif;
-  position: relative;
+}
+.menu .menucontent p {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menucontent .menu_title {
   font-size: 1.1rem;
@@ -476,4 +502,6 @@ footer ul li:nth-last-child(2) {
   top: 50%;
   transform: translateY(-50%);
   text-align: right;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*****checkmenu*****//*# sourceMappingURL=style.css.map */

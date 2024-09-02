@@ -47,9 +47,30 @@ footer{
   
 /*******media queries*******/
 
+@media (min-width: 1024px) {
+    .menu_restaurant{
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-top:-40px;
+    }
+    .title_restaurant{
+      display: flex;
+      justify-content: center;
+    }
+    .menu h3{
+      margin-left: 50px;
+    }
+    .menucontent{
+     margin-left: 50px;
+     margin-right: 50px;
+     position: relative;
+    }
+   
+    footer ul li:nth-last-child(3) {
+    padding-right:10px; /* Ajoute de l'espace à droite du troisième dernier élément */
+    }
 
 
-  @media (min-width: 1024px) {
     footer {
       position: relative; /* Assurez-vous que le footer est positionné par rapport à son conteneur */
       padding: 20px 0; /* Ajoutez un padding si nécessaire */
@@ -60,6 +81,7 @@ footer{
       flex-direction: row;
       justify-content: center; /* Centrez les éléments horizontalement */
       gap: 20px; /* Espacement entre les éléments */
+      margin-left: 250px;
     }
   
     footer ul li:nth-last-child(3) {
@@ -72,13 +94,16 @@ footer{
       right: 20px; /* Positionne le logo à 20px de la droite du footer */
     }
   
-    footer img {
-      max-width: 100px; /* Ajustez la taille du logo selon vos besoins */
-      height: auto;
-    }
+  
+    
   }
   
+  .information{
+    margin-right: 148px;
+    margin-left: 0px;
+  }
 
+  
 
   .footermenu{
     display:flex;
@@ -92,5 +117,5 @@ footer{
   /*****footermenu*****/
   .footermenu
   {position: relative;
-  top:-33px}
+  }
 

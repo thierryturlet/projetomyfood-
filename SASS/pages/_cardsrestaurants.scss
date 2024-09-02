@@ -18,7 +18,14 @@
       justify-content: space-between;
       align-items: start;
       font-family: Arial, sans-serif;
-      position: relative;
+      
+      
+      
+       p{
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;}
       
       .menu_title {
         font-size: 1.1rem;
@@ -45,7 +52,12 @@
         top: 50%;
         transform: translateY(-50%); 
         text-align: right;
+        
+        
+        }
       }
     }
-  }
   
+  /*****checkmenu*****/
+
+ 
