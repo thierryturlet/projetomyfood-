@@ -1,63 +1,174 @@
 
-.menu{margin: 20px;
-    h3 {
-      font-size: 1.2rem;
-      font-weight:300;
-      margin-bottom: 10px;
+
+
+      
+    
+    .menucontent{
+      border:transpanrent;
+     background-color: #fff;
+          border-radius: 12px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+          padding: 5px;
+          margin-bottom:10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      position:relative;
+      height:70px;
+      width:80%;
+      overflow:hidden;
       
     }
     
-    .menucontent {
-      background-color: #fff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      padding: 15px;
-      margin-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: start;
-      font-family: Arial, sans-serif;
+    .description {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .menu_title {
+        margin-bottom:-25px;
+     }
+
+   
+    
+    .menu_subtitle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+      font-size: 0.9rem;
+            color: #777;
+            margin: 0;
+            flex: 1;
+            
       
+    }
+
+    .menu>h3{
+      margin-left: 50px;
+    }
+    
+    .animationprix {
+        display: flex;
+        align-items: center;
       
+        height: 100%;
+      position:relative;
+      bottom:40px;
+      justify-content:flex-end;
+    }
+    
+    .euro {
+      font-weight: bold;
+        margin-right: 10px; /* Ajustez l'espace entre le prix et l'icône */
+      position:absolute;
+    }
+    
+    .menu_card_check {
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
       
-       p{
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;}
+    height:84px;
+      width:50px;
+      background-color:lightgreen;
+     position:absolute;
+      border-radius:0px 12px 12px 0px;
+      margin-right:-50px;
+      opacity:0;
+    bottom:-36px;
+    transition: all 0.3s ease-in-out;}
       
-      .menu_title {
-        font-size: 1.1rem;
-        font-weight: 600;
-        margin: 0;
-      }
+     .menucontent:hover .menu_card_check {
+        opacity: 1;
+        transform: translateX(-40px); /* Apparition et déplacement à gauche */
+       transition: all 0.3s ease-in-out;
+    }
       
-      .menu_subtitle {
-        font-size: 0.9rem;
-        color: #777;
-        margin: 0;
-        flex: 1;
-        padding-right: 60px;
+     .menucontent:hover .euro {
+        transform: translateX(-40px); /* Déplace le prix vers la gauche */
+        transition: all 0.3s ease-in-out; /* Animation fluide */
+    }
         
-      }
-  
-      .euro {
-        font-weight: bold;
-        margin-left: 10px;
-        min-width: 50px; 
-        text-align: right; 
-        position: absolute;
-        right: 15px;
-        top: 50%;
-        transform: translateY(-50%); 
-        text-align: right;
-        
-        
-        }
-      }
+    
+    
+    .fa-circle-check{
+        font-size:25px; 
+      /* Ajustez la taille de l'icône si nécessaire */
+      color:white;
+      align-items:center;
+      margin-left:12px;
+     transform: rotate(0deg); /* Position initiale sans rotation */
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .menu_card_check:hover .fa-circle-check {
+        transform: rotate(360deg); /* Rotation sur hover */
     }
   
-  /*****checkmenu*****/
+  
+/*******media queries*******/
 
- 
+@media (min-width:320px){
+  .menu{
+    margin-left:-34px;
+  
+  }
+ .menu h3:nth-last-child(3){
+  margin-left: -40px;
+ }
+}
+
+
+
+
+
+@media (min-width: 1024px){
+  .container-restaurant {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Pour espacer les éléments */
+  }
+  
+  .container-restaurant a {
+      width: 48%; /* Chaque image occupe environ la moitié de la ligne */
+      margin-bottom: 20px; /* Espacement vertical entre les lignes */
+  }
+  
+  .container-restaurant img {
+      width: 100%;
+      height:250px;
+      
+  }
+  
+  .menu_restaurant{
+      margin-left: 150px;
+      margin-right: 150px;
+      margin-top:-40px;
+    }
+    .title_restaurant{
+      display: flex;
+      justify-content: center;
+    }
+    
+
+    
+    
+    .menucontent{
+     margin-left: 50px;
+     margin-right: 50px;
+     position: relative;
+    }
+   
+}
+
+
+
+
+
+
+
+
+
+  

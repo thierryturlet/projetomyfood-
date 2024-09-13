@@ -73,11 +73,24 @@
 
    .title_restaurant{
     margin-left: 15px;
+    position: relative;
     .fa-regular.fa-heart{
       font-size: 30px;
       color: black;
       position: absolute;
-      right: 20px; top:40px;
+      right: 200px; top:40px;
     }
   }
-   
+  @media (min-width: 1024px){
+    .title_restaurant{
+      margin-left: 15px;
+      position:relative;
+      .fa-regular.fa-heart{
+        font-size: 30px;
+        color: black;
+        position: absolute;
+        right:382px; top:24px;
+
+  }
+}
+  }

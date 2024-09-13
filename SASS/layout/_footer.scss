@@ -44,27 +44,7 @@ footer{
     footer ul li:nth-last-child(2) {
       margin-bottom: 10px;
   }
-  
-/*******media queries*******/
 
-@media (min-width: 1024px) {
-    .menu_restaurant{
-      margin-left: 150px;
-      margin-right: 150px;
-      margin-top:-40px;
-    }
-    .title_restaurant{
-      display: flex;
-      justify-content: center;
-    }
-    .menu h3{
-      margin-left: 50px;
-    }
-    .menucontent{
-     margin-left: 50px;
-     margin-right: 50px;
-     position: relative;
-    }
    
     footer ul li:nth-last-child(3) {
     padding-right:10px; /* Ajoute de l'espace à droite du troisième dernier élément */
@@ -96,7 +76,7 @@ footer{
   
   
     
-  }
+  
   
   .information{
     margin-right: 148px;
