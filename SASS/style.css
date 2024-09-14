@@ -535,11 +535,9 @@ footer .container-logo {
 
 /*******media queries*******/
 @media (min-width: 320px) {
-  .menu {
-    margin-left: -34px;
-  }
-  .menu h3:nth-last-child(3) {
-    margin-left: -40px;
+  .menuglobal.menucontent {
+    margin-left: 18px;
+    width: 85%;
   }
 }
 @media (min-width: 1024px) {
