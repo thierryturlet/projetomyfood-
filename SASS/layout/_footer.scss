@@ -1,101 +1,45 @@
 /*****footercommun*****/
 
-footer{
-    background-color:rgba(53, 53, 53, 1) ;
-   }
-   
-   .information{
+.footermenu {
+  background-color: #333; /* Fond sombre comme sur l'image */
+  color: blanc; /* Texte blanc */
+  padding: 20px;
+  text-align: left;
+}
 
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-left:30px ;
-    
-    }
+.container-logo img {
+  width: 100px; /* Ajustez la taille du logo si nécessaire */
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
 
-    footer .container-logo img {
-      width: 100px;
-      height: auto;
-      margin-bottom:20px;
-      margin-top:35px;
-      filter: brightness(0) invert(1);
-      
-    
-    
-    }
-    footer ul {
-      list-style-type: none;
-      padding-left: 0;
-      margin: 0;
-      
-  }
-  
-    a.footerlink{
-    color:white ;
-    gap: 15px;
-  }
-    i.fa-solid.fa-utensils{
-      padding-right: 10px;
-      margin-bottom: 10px;
-    }
-    i.fa-sharp.fa-solid.fa-handshake-angle{
-      margin-bottom: 10px;
-    }
-    footer ul li:nth-last-child(2) {
-      margin-bottom: 10px;
-  }
+.information{
+  margin-left: 20px;
+}
 
-   
-    footer ul li:nth-last-child(3) {
-    padding-right:10px; /* Ajoute de l'espace à droite du troisième dernier élément */
-    }
+ul {
+  list-style: none;
+  padding: 0;
+}
 
+ul li {
+  margin-bottom: 10px;
+}
 
-    footer {
-      position: relative; /* Assurez-vous que le footer est positionné par rapport à son conteneur */
-      padding: 20px 0; /* Ajoutez un padding si nécessaire */
-    }
-  
-    footer ul {
-      display: flex;
-      flex-direction: row;
-      justify-content: center; /* Centrez les éléments horizontalement */
-      gap: 20px; /* Espacement entre les éléments */
-      margin-left: 250px;
-    }
-  
-    footer ul li:nth-last-child(3) {
-      margin-right: 40px; /* Ajoute de l'espace à droite du troisième dernier élément */
-    }
-  
-    footer .container-logo {
-      position: absolute; /* Positionnement absolu pour placer le logo */
-      top:-12px; /* Positionne le logo à 20px du bas du footer */
-      right: 20px; /* Positionne le logo à 20px de la droite du footer */
-    }
-  
-  
-    
-  
-  
-  .information{
-    margin-right: 148px;
-    margin-left: 0px;
-  }
+.footerlink {
+  color: white;
+  text-decoration: none;
+  font-family: 'Arial', sans-serif; /* Police similaire */
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
 
-  
+.footerlink i {
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+}
 
-  .footermenu{
-    display:flex;
-    flex-direction:row;
-    justify-content:center;
-    gap:20px;}
-  
-  
-
-
-  /*****footermenu*****/
-  .footermenu
-  {position: relative;
-  }
+.footerlink:hover {
+  text-decoration: underline;
+}
 

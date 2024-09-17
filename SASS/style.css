@@ -290,20 +290,12 @@ h1 {
   color: black;
 }
 
-.fa-regular.fa-heart {
+.heart-icon {
   font-size: 25px;
   color: black;
   position: absolute;
   right: 20px;
   top: 20px;
-}
-
-.fa-solid.fa-heart {
-  font-size: 25px;
-  color: rgb(151, 71, 255);
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
 }
 
 /*****menurestauraurant*****/
@@ -332,12 +324,9 @@ h1 {
     top: 24px;
   }
 }
-header, container-logo {
-  margin-top: 20px;
-  margin-bottom: 20px;
+.container_logo {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
@@ -350,91 +339,47 @@ header, container-logo {
 }
 
 /*****footercommun*****/
-footer {
-  background-color: rgb(53, 53, 53);
+.footermenu {
+  background-color: #333; /* Fond sombre comme sur l'image */
+  color: blanc; /* Texte blanc */
+  padding: 20px;
+  text-align: left;
 }
 
-.information {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  margin-left: 30px;
-}
-
-footer .container-logo img {
-  width: 100px;
-  height: auto;
+.container-logo img {
+  width: 100px; /* Ajustez la taille du logo si nécessaire */
   margin-bottom: 20px;
-  margin-top: 35px;
   filter: brightness(0) invert(1);
 }
 
-footer ul {
-  list-style-type: none;
-  padding-left: 0;
-  margin: 0;
-}
-
-a.footerlink {
-  color: white;
-  gap: 15px;
-}
-
-i.fa-solid.fa-utensils {
-  padding-right: 10px;
-  margin-bottom: 10px;
-}
-
-i.fa-sharp.fa-solid.fa-handshake-angle {
-  margin-bottom: 10px;
-}
-
-footer ul li:nth-last-child(2) {
-  margin-bottom: 10px;
-}
-
-footer ul li:nth-last-child(3) {
-  padding-right: 10px; /* Ajoute de l'espace à droite du troisième dernier élément */
-}
-
-footer {
-  position: relative; /* Assurez-vous que le footer est positionné par rapport à son conteneur */
-  padding: 20px 0; /* Ajoutez un padding si nécessaire */
-}
-
-footer ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centrez les éléments horizontalement */
-  gap: 20px; /* Espacement entre les éléments */
-  margin-left: 250px;
-}
-
-footer ul li:nth-last-child(3) {
-  margin-right: 40px; /* Ajoute de l'espace à droite du troisième dernier élément */
-}
-
-footer .container-logo {
-  position: absolute; /* Positionnement absolu pour placer le logo */
-  top: -12px; /* Positionne le logo à 20px du bas du footer */
-  right: 20px; /* Positionne le logo à 20px de la droite du footer */
-}
-
 .information {
-  margin-right: 148px;
-  margin-left: 0px;
+  margin-left: 20px;
 }
 
-.footermenu {
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+.footerlink {
+  color: white;
+  text-decoration: none;
+  font-family: "Arial", sans-serif; /* Police similaire */
+  font-size: 18px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 20px;
+  align-items: center;
 }
 
-/*****footermenu*****/
-.footermenu {
-  position: relative;
+.footerlink i {
+  margin-right: 10px; /* Espace entre l'icône et le texte */
+}
+
+.footerlink:hover {
+  text-decoration: underline;
 }
 
 .menucontent {
@@ -456,7 +401,7 @@ footer .container-logo {
 .description {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 103%;
 }
 
 .menu_title {
@@ -475,7 +420,8 @@ footer .container-logo {
 }
 
 .menu > h3 {
-  margin-left: 50px;
+  margin-left: 16px;
+  font-weight: 300;
 }
 
 .animationprix {
@@ -483,7 +429,7 @@ footer .container-logo {
   align-items: center;
   height: 100%;
   position: relative;
-  bottom: 40px;
+  bottom: 38px;
   justify-content: flex-end;
 }
 
@@ -497,8 +443,8 @@ footer .container-logo {
   margin-left: 5px;
   display: flex;
   align-items: center;
-  height: 84px;
-  width: 50px;
+  height: 90px;
+  width: 53px;
   background-color: lightgreen;
   position: absolute;
   border-radius: 0px 12px 12px 0px;
@@ -524,7 +470,7 @@ footer .container-logo {
   /* Ajustez la taille de l'icône si nécessaire */
   color: white;
   align-items: center;
-  margin-left: 12px;
+  margin-left: 8px;
   transform: rotate(0deg); /* Position initiale sans rotation */
   transition: transform 0.5s ease-in-out;
 }
@@ -533,14 +479,121 @@ footer .container-logo {
   transform: rotate(360deg); /* Rotation sur hover */
 }
 
+.heart-icon {
+  color: transparent;
+  border: 2px solid transparent;
+  -webkit-text-stroke: 2px black; /* Contour de l'icône */
+  transition: all 0.5s ease-in-out;
+}
+
+.title_restaurant .heart-icon {
+  color: transparent;
+  border: 2px solid transparent;
+  -webkit-text-stroke: 2px black; /* Contour de l'icône */
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 6px;
+}
+
+.heart-icon:hover {
+  color: violet;
+  background: linear-gradient(45deg, violet, red);
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: color 0.9s ease-in-out;
+}
+
 /*******media queries*******/
 @media (min-width: 320px) {
-  .menuglobal.menucontent {
-    margin-left: 18px;
-    width: 85%;
+  .menuglobal .menucontent {
+    margin-left: 14px;
+    width: 90%;
+  }
+  .menuglobal > h3 {
+    margin-left: 10px;
+  }
+  .title_restaurant .heart-icon {
+    color: transparent;
+    border: 2px solid transparent;
+    -webkit-text-stroke: 2px black;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 6px;
+    right: 45px;
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 320px) and (min-width: 768px) {
+  .menuglobal .menucontent {
+    margin-left: 14px;
+    width: 90%;
+  }
+  .footermenu ul {
+    display: flex;
+    gap: 10px;
+    margin-left: -15px;
+    position: relative;
+  }
+  .information {
+    margin-left: 20px;
+  }
+  .information .container-logo {
+    position: absolute;
+    right: 0px;
+  }
+  .menuglobal {
+    margin-left: 35px;
+  }
+  .menuglobal > h3 {
+    margin-left: 10px;
+  }
+  .euro {
+    font-weight: bold;
+    margin-right: 25px; /* Ajustez l'espace entre le prix et l'icône */
+    position: absolute;
+  }
+  .menu_card_check {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    background-color: lightgreen;
+    position: absolute;
+    border-radius: 0px 12px 12px 0px;
+    margin-right: -50px;
+    opacity: 0;
+    bottom: -36px;
+    transition: all 0.3s ease-in-out;
+  }
+  .title_restaurant {
+    margin-left: 240px;
+    position: relative;
+  }
+  .title_restaurant .heart-icon {
+    color: transparent;
+    border: 2px solid transparent;
+    -webkit-text-stroke: 2px black; /* Contour de l'icône */
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 6px;
+    left: 242px;
+  }
+  .ordercard {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 30px 30px 30px 30px;
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    margin: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgb(243, 243, 243);
+  }
+}
+@media (min-width: 320px) and (min-width: 1024px) {
   .container-restaurant {
     display: flex;
     flex-wrap: wrap;
@@ -562,10 +615,63 @@ footer .container-logo {
   .title_restaurant {
     display: flex;
     justify-content: center;
+    margin-left: 20px;
   }
   .menucontent {
     margin-left: 50px;
     margin-right: 50px;
     position: relative;
+  }
+  .euro {
+    font-weight: bold;
+    margin-right: 45px; /* Ajustez l'espace entre le prix et l'icône */
+    position: absolute;
+  }
+  .menu_card_check {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 90px;
+    background-color: lightgreen;
+    position: absolute;
+    border-radius: 0px 12px 12px 0px;
+    margin-right: -50px;
+    opacity: 0;
+    bottom: -36px;
+    transition: all 0.3s ease-in-out;
+  }
+  .title_restaurant .heart-icon {
+    color: transparent;
+    border: 2px solid transparent;
+    -webkit-text-stroke: 2px black;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 24px;
+    left: 470px;
+  }
+  .footermenu ul {
+    display: flex;
+    gap: 10px;
+    margin-left: -15px;
+    position: relative;
+  }
+  .information {
+    margin-left: 20px;
+  }
+  .information .container-logo {
+    position: absolute;
+    right: 0px;
+  }
+}
+@media (min-width: 1440px) {
+  .title_restaurant .heart-icon {
+    color: transparent;
+    border: 2px solid transparent;
+    -webkit-text-stroke: 2px black;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 24px;
+    left: 681px;
   }
 }/*# sourceMappingURL=style.css.map */
