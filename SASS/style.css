@@ -324,10 +324,63 @@ h1 {
     top: 24px;
   }
 }
+.loader {
+  position: fixed;
+  margin: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: disappear 1s;
+  background-color: #ffffff;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+}
+
+@keyframes disappear {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+  25% {
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.15);
+    border-top-color: #d115de;
+    border-bottom-color: #d115de;
+  }
+  75% {
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border-top-color: #d115de;
+    border-bottom-color: #d115de;
+  }
+}
 .container_logo {
   display: flex;
   justify-content: center;
   position: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .fa-sharp.fa-solid.fa-arrow-left {
@@ -383,7 +436,7 @@ ul li {
 }
 
 .menucontent {
-  border: transpanrent;
+  border: transparent;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -422,6 +475,19 @@ ul li {
 .menu > h3 {
   margin-left: 16px;
   font-weight: 300;
+  display: inline-block;
+  padding-bottom: 5px; /* Ajuste l'espace entre le texte et le trait */
+  position: relative;
+}
+
+.menu > h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Ajuste l'espace entre le texte et la ligne */
+  width: 80%; /* Souligner tout le texte */
+  height: 3px; /* Épaisseur du trait */
+  background-color: rgb(153, 226, 208); /* Couleur du trait */
 }
 
 .animationprix {
@@ -444,7 +510,7 @@ ul li {
   display: flex;
   align-items: center;
   height: 90px;
-  width: 53px;
+  width: 75px;
   background-color: lightgreen;
   position: absolute;
   border-radius: 0px 12px 12px 0px;
@@ -503,6 +569,12 @@ ul li {
   transition: color 0.9s ease-in-out;
 }
 
+.menu_title h3, .menu_subtitle p {
+  white-space: nowrap; /* Empêche le texte de sauter à la ligne */
+  overflow: hidden; /* Cache le texte qui dépasse */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+}
+
 /*******media queries*******/
 @media (min-width: 320px) {
   .menuglobal .menucontent {
@@ -520,6 +592,20 @@ ul li {
     position: absolute;
     top: 6px;
     right: 45px;
+  }
+  .menu_card_check {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 54px;
+    background-color: lightgreen;
+    position: absolute;
+    border-radius: 0px 12px 12px 0px;
+    margin-right: -50px;
+    opacity: 0;
+    bottom: -36px;
+    transition: all 0.3s ease-in-out;
   }
 }
 @media (min-width: 320px) and (min-width: 768px) {
@@ -539,6 +625,7 @@ ul li {
   .information .container-logo {
     position: absolute;
     right: 0px;
+    margin-right: 15px;
   }
   .menuglobal {
     margin-left: 35px;
@@ -556,7 +643,7 @@ ul li {
     display: flex;
     align-items: center;
     height: 90px;
-    width: 90px;
+    width: 73px;
     background-color: lightgreen;
     position: absolute;
     border-radius: 0px 12px 12px 0px;
@@ -632,7 +719,7 @@ ul li {
     display: flex;
     align-items: center;
     height: 90px;
-    width: 90px;
+    width: 75px;
     background-color: lightgreen;
     position: absolute;
     border-radius: 0px 12px 12px 0px;
@@ -655,6 +742,7 @@ ul li {
     gap: 10px;
     margin-left: -15px;
     position: relative;
+    justify-content: center;
   }
   .information {
     margin-left: 20px;
@@ -662,6 +750,7 @@ ul li {
   .information .container-logo {
     position: absolute;
     right: 0px;
+    margin-right: 15px;
   }
 }
 @media (min-width: 1440px) {
@@ -670,8 +759,22 @@ ul li {
     border: 2px solid transparent;
     -webkit-text-stroke: 2px black;
     transition: all 0.5s ease-in-out;
+    display: flex;
+    justify-content: space-around;
+    margin-right: 90px;
+  }
+  .menu_card_check {
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    height: 90px;
+    width: 85px;
+    background-color: lightgreen;
     position: absolute;
-    top: 24px;
-    left: 681px;
+    border-radius: 0px 12px 12px 0px;
+    margin-right: -50px;
+    opacity: 0;
+    bottom: -36px;
+    transition: all 0.3s ease-in-out;
   }
 }/*# sourceMappingURL=style.css.map */
