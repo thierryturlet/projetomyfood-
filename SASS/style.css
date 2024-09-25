@@ -457,13 +457,14 @@ ul li {
 }
 
 .description {
-  width: 103%;
+  width: 80%;
 }
 
 .menucontent h3, p {
   white-space: nowrap; /* Empêche le texte de sauter à la ligne */
   overflow: hidden; /* Cache le texte qui dépasse */
   text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+  display: block;
 }
 
 .menucontent h3 {
@@ -600,8 +601,12 @@ ul li {
     opacity: 0;
     transition: all 0.3s ease-in-out;
   }
+  .menucontent h3, p {
+    overflow: hidden; /* Cache le texte qui dépasse */
+    text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+  }
 }
-@media (min-width: 320px) and (min-width: 768px) {
+@media (min-width: 768px) {
   .menuglobal .menucontent {
     margin-left: 14px;
     width: 90%;
@@ -669,7 +674,7 @@ ul li {
     background-color: rgb(243, 243, 243);
   }
 }
-@media (min-width: 320px) and (min-width: 1024px) {
+@media (min-width: 1024px) {
   .container-restaurant {
     display: flex;
     flex-wrap: wrap;

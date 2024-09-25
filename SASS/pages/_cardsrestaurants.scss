@@ -18,26 +18,29 @@
       width:80%;
       overflow: hidden;
       text-overflow: ellipsis;
+
       
       
     }
     
     .description {
         
-        width: 103%;
+        width: 80%;
     }
     
-    .menucontent h3,p {
+    .menucontent h3, p {
       white-space: nowrap; /* Empêche le texte de sauter à la ligne */
       overflow: hidden; /* Cache le texte qui dépasse */
       text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+      display: block;
+
   }
   .menucontent h3 {
     margin: 0;
     font-size: 18px; /* Ajuste la taille si nécessaire */
     padding-top: 15px;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis; 
   }
   
   .menucontent p {
@@ -203,6 +206,13 @@ background-color:lightgreen;
   transition: all 0.3s ease-in-out;
 }
 
+.menucontent h3,p {
+  
+  overflow: hidden; /* Cache le texte qui dépasse */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+}
+
+}
 
 @media (min-width:768px){
 
@@ -378,7 +388,7 @@ height:84px;
       margin-right: 15px;
      }
     }
-  }
+  
 
   @media (min-width: 1440px) {
     .title_restaurant .heart-icon {
