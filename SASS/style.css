@@ -325,7 +325,6 @@ h1 {
   }
 }
 .loader {
-  position: fixed;
   margin: auto;
   margin-top: 100px;
   margin-bottom: 100px;
@@ -342,11 +341,17 @@ h1 {
   opacity: 0.9;
 }
 
+.load {
+  display: none;
+}
+
 @keyframes disappear {
   0% {
+    opacity: 1;
     transform: scale(1);
   }
   100% {
+    opacity: 0;
     transform: scale(0);
   }
 }
@@ -443,33 +448,38 @@ ul li {
   padding: 5px;
   margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  position: relative;
+  justify-content: space-between;
+  flex-wrap: nowrap;
   height: 70px;
   width: 80%;
   overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .description {
-  display: flex;
-  flex-direction: column;
   width: 103%;
 }
 
-.menu_title {
-  margin-bottom: -25px;
+.menucontent h3, p {
+  white-space: nowrap; /* Empêche le texte de sauter à la ligne */
+  overflow: hidden; /* Cache le texte qui dépasse */
+  text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
 }
 
-.menu_subtitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  font-size: 0.9rem;
-  color: #777;
+.menucontent h3 {
   margin: 0;
-  flex: 1;
+  font-size: 18px; /* Ajuste la taille si nécessaire */
+  padding-top: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menucontent p {
+  margin: 0;
+  padding-top: 3px; /* Ajuste l'espacement entre le titre et le sous-titre */
+  font-size: 14px; /* Ajuste la taille si nécessaire */
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu > h3 {
@@ -493,30 +503,21 @@ ul li {
 .animationprix {
   display: flex;
   align-items: center;
-  height: 100%;
-  position: relative;
-  bottom: 38px;
-  justify-content: flex-end;
 }
 
 .euro {
-  font-weight: bold;
-  margin-right: 10px; /* Ajustez l'espace entre le prix et l'icône */
-  position: absolute;
+  margin-top: 23px;
 }
 
 .menu_card_check {
   margin-left: 5px;
   display: flex;
   align-items: center;
-  height: 90px;
-  width: 75px;
+  height: 84px;
+  width: 50px;
   background-color: lightgreen;
-  position: absolute;
   border-radius: 0px 12px 12px 0px;
   margin-right: -50px;
-  opacity: 0;
-  bottom: -36px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -569,12 +570,6 @@ ul li {
   transition: color 0.9s ease-in-out;
 }
 
-.menu_title h3, .menu_subtitle p {
-  white-space: nowrap; /* Empêche le texte de sauter à la ligne */
-  overflow: hidden; /* Cache le texte qui dépasse */
-  text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
-}
-
 /*******media queries*******/
 @media (min-width: 320px) {
   .menuglobal .menucontent {
@@ -597,14 +592,12 @@ ul li {
     margin-left: 5px;
     display: flex;
     align-items: center;
-    height: 90px;
-    width: 54px;
+    height: 84px;
+    width: 50px;
     background-color: lightgreen;
-    position: absolute;
     border-radius: 0px 12px 12px 0px;
     margin-right: -50px;
     opacity: 0;
-    bottom: -36px;
     transition: all 0.3s ease-in-out;
   }
 }
@@ -635,21 +628,17 @@ ul li {
   }
   .euro {
     font-weight: bold;
-    margin-right: 25px; /* Ajustez l'espace entre le prix et l'icône */
-    position: absolute;
   }
   .menu_card_check {
     margin-left: 5px;
     display: flex;
     align-items: center;
-    height: 90px;
-    width: 73px;
+    height: 84px;
+    width: 50px;
     background-color: lightgreen;
-    position: absolute;
     border-radius: 0px 12px 12px 0px;
     margin-right: -50px;
     opacity: 0;
-    bottom: -36px;
     transition: all 0.3s ease-in-out;
   }
   .title_restaurant {
@@ -711,21 +700,17 @@ ul li {
   }
   .euro {
     font-weight: bold;
-    margin-right: 45px; /* Ajustez l'espace entre le prix et l'icône */
-    position: absolute;
   }
   .menu_card_check {
     margin-left: 5px;
     display: flex;
     align-items: center;
-    height: 90px;
-    width: 75px;
+    height: 84px;
+    width: 50px;
     background-color: lightgreen;
-    position: absolute;
     border-radius: 0px 12px 12px 0px;
     margin-right: -50px;
     opacity: 0;
-    bottom: -36px;
     transition: all 0.3s ease-in-out;
   }
   .title_restaurant .heart-icon {
@@ -767,14 +752,12 @@ ul li {
     margin-left: 5px;
     display: flex;
     align-items: center;
-    height: 90px;
-    width: 85px;
+    height: 84px;
+    width: 50px;
     background-color: lightgreen;
-    position: absolute;
     border-radius: 0px 12px 12px 0px;
     margin-right: -50px;
     opacity: 0;
-    bottom: -36px;
     transition: all 0.3s ease-in-out;
   }
 }/*# sourceMappingURL=style.css.map */

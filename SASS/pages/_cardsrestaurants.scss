@@ -11,41 +11,46 @@
           padding: 5px;
           margin-bottom:10px;
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      position:relative;
+        justify-content: space-between;
+      flex-wrap: nowrap;
+      
       height:70px;
       width:80%;
-      overflow:hidden;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      
       
     }
     
     .description {
-        display: flex;
-        flex-direction: column;
+        
         width: 103%;
     }
     
-    .menu_title {
-        margin-bottom:-25px;
-    
-    }
-     
-
-   
-    
-    .menu_subtitle {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-      font-size: 0.9rem;
-            color: #777;
-            margin: 0;
-            flex: 1;
+    .menucontent h3,p {
+      white-space: nowrap; /* Empêche le texte de sauter à la ligne */
+      overflow: hidden; /* Cache le texte qui dépasse */
+      text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+  }
+  .menucontent h3 {
+    margin: 0;
+    font-size: 18px; /* Ajuste la taille si nécessaire */
+    padding-top: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .menucontent p {
+    margin: 0;
+    padding-top: 3px; /* Ajuste l'espacement entre le titre et le sous-titre */
+    font-size: 14px; /* Ajuste la taille si nécessaire */
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
        
       
-    }
+    
 
     .menu>h3{
       margin-left: 16px;
@@ -73,18 +78,13 @@
     .animationprix {
         display: flex;
         align-items: center;
-      
-        height: 100%;
-      position:relative;
-      bottom:38px;
-      justify-content:flex-end;
     }
     
-    .euro {
-      font-weight: bold;
-        margin-right: 10px; /* Ajustez l'espace entre le prix et l'icône */
-      position:absolute;
+    .euro{
+      margin-top: 23px;
     }
+    
+    
 
     
     
@@ -93,14 +93,13 @@
         display: flex;
         align-items: center;
       
-    height:90px;
-      width:75px;
+    height:84px;
+      width:50px;
       background-color:lightgreen;
-     position:absolute;
+    
       border-radius:0px 12px 12px 0px;
       margin-right:-50px;
-      opacity:0;
-    bottom:-36px;
+    
     transition: all 0.3s ease-in-out;}
       
      .menucontent:hover .menu_card_check {
@@ -110,6 +109,7 @@
     }
       
      .menucontent:hover .euro {
+        
         transform: translateX(-40px); /* Déplace le prix vers la gauche */
         transition: all 0.3s ease-in-out; /* Animation fluide */
     }
@@ -129,6 +129,11 @@
     .menu_card_check:hover .fa-circle-check {
         transform: rotate(360deg); /* Rotation sur hover */
     }
+
+
+
+
+
   
     .heart-icon {
       color: transparent;
@@ -155,11 +160,7 @@
       transition: color 0.9s ease-in-out;
   }
 
-  .menu_title h3, .menu_subtitle p {
-    white-space: nowrap; /* Empêche le texte de sauter à la ligne */
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
-}
+
 
 
   
@@ -191,14 +192,14 @@
   display: flex;
   align-items: center;
 
-height:90px;
-width:54px;
+height:84px;
+width:50px;
 background-color:lightgreen;
-   position:absolute;
+   
     border-radius:0px 12px 12px 0px;
     margin-right:-50px;
     opacity:0;
-  bottom:-36px;
+  
   transition: all 0.3s ease-in-out;
 }
 
@@ -237,8 +238,8 @@ background-color:lightgreen;
 
   .euro {
     font-weight: bold;
-      margin-right: 25px; /* Ajustez l'espace entre le prix et l'icône */
-    position:absolute;
+      
+    
   }
 
   .menu_card_check {
@@ -246,14 +247,14 @@ background-color:lightgreen;
     display: flex;
     align-items: center;
   
-height:90px;
-  width:73px;
+height:84px;
+  width:50px;
   background-color:lightgreen;
-     position:absolute;
+     
       border-radius:0px 12px 12px 0px;
       margin-right:-50px;
       opacity:0;
-    bottom:-36px;
+    
     transition: all 0.3s ease-in-out;
   }
 
@@ -331,8 +332,7 @@ height:90px;
 
     .euro {
       font-weight: bold;
-        margin-right: 45px; /* Ajustez l'espace entre le prix et l'icône */
-      position:absolute;
+       
     }
 
     .menu_card_check {
@@ -340,14 +340,14 @@ height:90px;
       display: flex;
       align-items: center;
     
-  height:90px;
-    width:75px;
+  height:84px;
+    width:50px;
     background-color:lightgreen;
-     position:absolute;
+     
       border-radius:0px 12px 12px 0px;
       margin-right:-50px;
       opacity:0;
-    bottom:-36px;
+    
     transition: all 0.3s ease-in-out;
     }
 
@@ -396,14 +396,14 @@ height:90px;
       display: flex;
       align-items: center;
     
-  height:90px;
-    width:85px;
+  height:84px;
+    width:50px;
     background-color:lightgreen;
-     position:absolute;
+    
       border-radius:0px 12px 12px 0px;
       margin-right:-50px;
       opacity:0;
-    bottom:-36px;
+  
     transition: all 0.3s ease-in-out;
     }
 
