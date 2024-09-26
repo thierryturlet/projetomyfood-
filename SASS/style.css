@@ -334,25 +334,21 @@ h1 {
   border-top-color: #1abc9c;
   border-bottom-color: #3498db;
   border-radius: 50%;
-  animation: disappear 1s;
+  animation: disappear 3s;
   background-color: #ffffff;
   inset: 0;
-  z-index: 1;
+  animation: chargeur 2s infinite linear, disappear 3s forwards; /* Application des deux animations */
   opacity: 0.9;
 }
 
-.load {
-  display: none;
-}
-
-@keyframes disappear {
+@keyframes fadeOutContainer {
   0% {
     opacity: 1;
-    transform: scale(1);
+    visibility: visible;
   }
   100% {
     opacity: 0;
-    transform: scale(0);
+    visibility: hidden; /* Masquer le conteneur après la disparition */
   }
 }
 @keyframes chargeur {
@@ -380,6 +376,20 @@ h1 {
     border-bottom-color: #d115de;
   }
 }
+.load {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec opacité */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Superposition au-dessus des autres éléments */
+  animation: fadeOutContainer 3.5s forwards 3.5s; /* Animation de disparition démarrant après 3.5s */
+}
+
 .container_logo {
   display: flex;
   justify-content: center;
@@ -456,53 +466,41 @@ ul li {
   text-overflow: ellipsis;
   align-items: center;
 }
-
-.description {
-  flex-grow: 1; /* Permet à la description de prendre tout l'espace disponible */
-  flex-shrink: 1; /* Permet à la description de se réduire */
-  min-width: 0; /* Important : empêche l'élément de dépasser et permet la troncature */
-  width: 80%;
+.menucontent .description {
+  max-width: 70%;
 }
-
-.description h3, p {
+.menucontent .description h3, .menucontent .description p {
+  margin: 0;
   white-space: nowrap; /* Empêche le texte de sauter à la ligne */
   overflow: hidden; /* Cache le texte qui dépasse */
   text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
   display: block;
 }
-
-.menucontent h3 {
-  margin: 0;
+.menucontent .description h3 {
   font-size: 18px; /* Ajuste la taille si nécessaire */
   padding-top: 15px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
-
-.menucontent p {
-  margin: 0;
+.menucontent .description p {
   padding-top: 3px; /* Ajuste l'espacement entre le titre et le sous-titre */
   font-size: 14px; /* Ajuste la taille si nécessaire */
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
+/*******media queries*******/
 .menu > h3 {
   margin-left: 16px;
   font-weight: 300;
   display: inline-block;
-  padding-bottom: 5px; /* Ajuste l'espace entre le texte et le trait */
+  padding-bottom: 5px;
   position: relative;
 }
-
 .menu > h3::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px; /* Ajuste l'espace entre le texte et la ligne */
-  width: 80%; /* Souligner tout le texte */
-  height: 3px; /* Épaisseur du trait */
-  background-color: rgb(153, 226, 208); /* Couleur du trait */
+  bottom: -5px;
+  width: 80%;
+  height: 3px;
+  background-color: rgb(153, 226, 208);
 }
 
 .animationprix {
@@ -527,48 +525,35 @@ ul li {
   margin-right: -50px;
   transition: all 0.3s ease-in-out;
 }
+.menu_card_check:hover .fa-circle-check {
+  transform: rotate(360deg);
+}
 
 .menucontent:hover .menu_card_check {
   opacity: 1;
-  transform: translateX(-40px); /* Apparition et déplacement à gauche */
+  transform: translateX(-40px);
   transition: all 0.3s ease-in-out;
 }
-
 .menucontent:hover .euro {
-  transform: translateX(-40px); /* Déplace le prix vers la gauche */
-  transition: all 0.3s ease-in-out; /* Animation fluide */
+  transform: translateX(-40px);
+  transition: all 0.3s ease-in-out;
 }
 
 .fa-circle-check {
   font-size: 25px;
-  /* Ajustez la taille de l'icône si nécessaire */
   color: white;
   align-items: center;
   margin-left: 8px;
-  transform: rotate(0deg); /* Position initiale sans rotation */
+  transform: rotate(0deg);
   transition: transform 0.5s ease-in-out;
-}
-
-.menu_card_check:hover .fa-circle-check {
-  transform: rotate(360deg); /* Rotation sur hover */
 }
 
 .heart-icon {
   color: transparent;
   border: 2px solid transparent;
-  -webkit-text-stroke: 2px black; /* Contour de l'icône */
+  -webkit-text-stroke: 2px black;
   transition: all 0.5s ease-in-out;
 }
-
-.title_restaurant .heart-icon {
-  color: transparent;
-  border: 2px solid transparent;
-  -webkit-text-stroke: 2px black; /* Contour de l'icône */
-  transition: all 0.5s ease-in-out;
-  position: absolute;
-  top: 6px;
-}
-
 .heart-icon:hover {
   color: violet;
   background: linear-gradient(45deg, violet, red);
@@ -577,7 +562,15 @@ ul li {
   transition: color 0.9s ease-in-out;
 }
 
-/*******media queries*******/
+.title_restaurant .heart-icon {
+  color: transparent;
+  border: 2px solid transparent;
+  -webkit-text-stroke: 2px black;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  top: 6px;
+}
+
 @media (min-width: 320px) {
   .menuglobal .menucontent {
     margin-left: 14px;
@@ -607,15 +600,25 @@ ul li {
     opacity: 0;
     transition: all 0.3s ease-in-out;
   }
-  .menucontent h3, p {
-    overflow: hidden; /* Cache le texte qui dépasse */
-    text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
+  .menucontent h3 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  p {
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 @media (min-width: 768px) {
+  .menuglobal {
+    margin-left: 35px;
+  }
   .menuglobal .menucontent {
     margin-left: 14px;
     width: 90%;
+  }
+  .menuglobal > h3 {
+    margin-left: 10px;
   }
   .footermenu ul {
     display: flex;
@@ -630,12 +633,6 @@ ul li {
     position: absolute;
     right: 0px;
     margin-right: 15px;
-  }
-  .menuglobal {
-    margin-left: 35px;
-  }
-  .menuglobal > h3 {
-    margin-left: 10px;
   }
   .euro {
     font-weight: bold;
@@ -659,7 +656,7 @@ ul li {
   .title_restaurant .heart-icon {
     color: transparent;
     border: 2px solid transparent;
-    -webkit-text-stroke: 2px black; /* Contour de l'icône */
+    -webkit-text-stroke: 2px black;
     transition: all 0.5s ease-in-out;
     position: absolute;
     top: 6px;
@@ -684,11 +681,11 @@ ul li {
   .container-restaurant {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Pour espacer les éléments */
+    justify-content: space-between;
   }
   .container-restaurant a {
-    width: 48%; /* Chaque image occupe environ la moitié de la ligne */
-    margin-bottom: 20px; /* Espacement vertical entre les lignes */
+    width: 48%;
+    margin-bottom: 20px;
   }
   .container-restaurant img {
     width: 100%;
@@ -703,6 +700,15 @@ ul li {
     display: flex;
     justify-content: center;
     margin-left: 20px;
+  }
+  .title_restaurant .heart-icon {
+    color: transparent;
+    border: 2px solid transparent;
+    -webkit-text-stroke: 2px black;
+    transition: all 0.5s ease-in-out;
+    position: absolute;
+    top: 24px;
+    left: 470px;
   }
   .menucontent {
     margin-left: 50px;
@@ -723,15 +729,6 @@ ul li {
     margin-right: -50px;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-  }
-  .title_restaurant .heart-icon {
-    color: transparent;
-    border: 2px solid transparent;
-    -webkit-text-stroke: 2px black;
-    transition: all 0.5s ease-in-out;
-    position: absolute;
-    top: 24px;
-    left: 470px;
   }
   .footermenu ul {
     display: flex;

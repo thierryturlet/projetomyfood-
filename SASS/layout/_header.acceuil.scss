@@ -1,63 +1,76 @@
 .loader{
     
-    margin:auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    border: 16px solid #FF79DA;
-    width: 120px;
-    height: 120px;
-    border-top-color: #1abc9c;
-    border-bottom-color: #3498db;
-    border-radius: 50%;
-    animation: disappear 1s;
-    background-color: #ffffff;
-    inset:0;
-    z-index:1;
-    opacity: 0.9;
-  }
+  margin:auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: 16px solid #FF79DA;
+  width: 120px;
+  height: 120px;
+  border-top-color: #1abc9c;
+  border-bottom-color: #3498db;
+  border-radius: 50%;
+  animation: disappear 3s;
+  background-color: #ffffff;
+  inset:0;
+  animation: chargeur 2s infinite linear, disappear 3s       forwards; /* Application des deux animations */
+  opacity: 0.9;
+}
 
-  .load{
-    display: none;
+@keyframes fadeOutContainer {
+  0% {
+    opacity: 1;
+    visibility: visible;
   }
+  100% {
+    opacity: 0;
+    visibility: hidden; /* Masquer le conteneur après la disparition */
+  }
+}
 
-  @keyframes disappear{
-    0%{
-        opacity: 1;
-        transform: scale(1);
-    }
-  
+
+
+
+
+@keyframes chargeur {
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: red;
+    border-bottom-color: red;
+  }
+  25%{
+    border-top-color:#99E2D0;
+    border-bottom-color: #99E2D0;
+  }
+  50% {
+     transform: rotate(360deg) scale(1.15);
+    border-top-color:#d115de;
+    border-bottom-color: #d115de;
+  }
+  75%{
+    border-top-color: #99E2D0;
+    border-bottom-color: #99E2D0;
+  }
   100%{
-        opacity: 0;
-        transform: scale(0);
-      }
+     transform: rotate(720deg) scale(1);
+    border-top-color:#d115de;
+    border-bottom-color: #d115de;
   }
+  
+}
+.load {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(255, 255, 255, 0.9); /* Fond blanc avec opacité */
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Superposition au-dessus des autres éléments */
+animation: fadeOutContainer 3.5s forwards 3.5s; /* Animation de disparition démarrant après 3.5s */
+}
 
-  @keyframes chargeur {
-    0%{
-      transform: rotate(0deg) scale(1);
-      border-top-color: red;
-      border-bottom-color: red;
-    }
-    25%{
-      border-top-color:#99E2D0;
-      border-bottom-color: #99E2D0;
-    }
-    50% {
-       transform: rotate(360deg) scale(1.15);
-      border-top-color:#d115de;
-      border-bottom-color: #d115de;
-    }
-    75%{
-      border-top-color: #99E2D0;
-      border-bottom-color: #99E2D0;
-    }
-    100%{
-       transform: rotate(720deg) scale(1);
-      border-top-color:#d115de;
-      border-bottom-color: #d115de;
-    }
-    
-  }
 
 
 .container_logo
