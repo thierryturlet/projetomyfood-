@@ -399,7 +399,7 @@ h1 {
 /*****footercommun*****/
 .footermenu {
   background-color: #333; /* Fond sombre comme sur l'image */
-  color: blanc; /* Texte blanc */
+  color: white; /* Texte blanc */
   padding: 20px;
   text-align: left;
 }
@@ -454,13 +454,17 @@ ul li {
   width: 80%;
   overflow: hidden;
   text-overflow: ellipsis;
+  align-items: center;
 }
 
 .description {
+  flex-grow: 1; /* Permet à la description de prendre tout l'espace disponible */
+  flex-shrink: 1; /* Permet à la description de se réduire */
+  min-width: 0; /* Important : empêche l'élément de dépasser et permet la troncature */
   width: 80%;
 }
 
-.menucontent h3, p {
+.description h3, p {
   white-space: nowrap; /* Empêche le texte de sauter à la ligne */
   overflow: hidden; /* Cache le texte qui dépasse */
   text-overflow: ellipsis; /* Ajoute "..." si le texte dépasse */
@@ -504,10 +508,12 @@ ul li {
 .animationprix {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .euro {
   margin-top: 23px;
+  font-size: 18px;
 }
 
 .menu_card_check {
