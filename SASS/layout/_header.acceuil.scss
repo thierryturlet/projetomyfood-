@@ -9,10 +9,10 @@
   border-top-color: #1abc9c;
   border-bottom-color: #3498db;
   border-radius: 50%;
-  animation: disappear 3s;
+  animation: disappear 2s;
   background-color: #ffffff;
   inset:0;
-  animation: chargeur 2s infinite linear, disappear 3s       forwards; /* Application des deux animations */
+  animation: chargeur 2s infinite linear, disappear 2s   forwards; /* Application des deux animations */
   opacity: 0.9;
 }
 
@@ -68,7 +68,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 z-index: 1000; /* Superposition au-dessus des autres éléments */
-animation: fadeOutContainer 3.5s forwards 3.5s; /* Animation de disparition démarrant après 3.5s */
+animation: fadeOutContainer 2.5s forwards 2.5s; /* Animation de disparition démarrant après 3.5s */
 }
 
 

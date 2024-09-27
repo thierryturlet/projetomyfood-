@@ -13,6 +13,25 @@
   overflow: hidden;
   text-overflow: ellipsis;
   align-items: center;
+  animation-duration:3s;
+  animation-name: glissement;
+  
+  animation: fadeIn 3s ease-in-out forwards;
+  
+  @keyframes fadeIn {
+  0% {
+    top: -50px; /* Position initiale (au-dessus) */
+    opacity: 0; /* Transparent */
+  }
+  100% {
+    top: 0px; /* Position finale (position normale) */
+    opacity: 1; /* Opaque */
+  }
+}
+ 
+
+
+
   & .description {
     
     max-width: 70%;
@@ -45,7 +64,7 @@ $background-color_2: lightgreen;
 $background-color_3: #fff;
 $background-color_4: rgb(243, 243, 243);
 
-/*******media queries*******/
+
 .menu {
 	>h3 {
 		margin-left: 16px;

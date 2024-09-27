@@ -334,10 +334,10 @@ h1 {
   border-top-color: #1abc9c;
   border-bottom-color: #3498db;
   border-radius: 50%;
-  animation: disappear 3s;
+  animation: disappear 2s;
   background-color: #ffffff;
   inset: 0;
-  animation: chargeur 2s infinite linear, disappear 3s forwards; /* Application des deux animations */
+  animation: chargeur 2s infinite linear, disappear 2s forwards; /* Application des deux animations */
   opacity: 0.9;
 }
 
@@ -387,7 +387,7 @@ h1 {
   justify-content: center;
   align-items: center;
   z-index: 1000; /* Superposition au-dessus des autres éléments */
-  animation: fadeOutContainer 3.5s forwards 3.5s; /* Animation de disparition démarrant après 3.5s */
+  animation: fadeOutContainer 2.5s forwards 2.5s; /* Animation de disparition démarrant après 3.5s */
 }
 
 .container_logo {
@@ -465,6 +465,19 @@ ul li {
   overflow: hidden;
   text-overflow: ellipsis;
   align-items: center;
+  animation-duration: 3s;
+  animation-name: glissement;
+  animation: fadeIn 3s ease-in-out forwards;
+}
+@keyframes fadeIn {
+  0% {
+    top: -50px; /* Position initiale (au-dessus) */
+    opacity: 0; /* Transparent */
+  }
+  100% {
+    top: 0px; /* Position finale (position normale) */
+    opacity: 1; /* Opaque */
+  }
 }
 .menucontent .description {
   max-width: 70%;
@@ -485,7 +498,6 @@ ul li {
   font-size: 14px; /* Ajuste la taille si nécessaire */
 }
 
-/*******media queries*******/
 .menu > h3 {
   margin-left: 16px;
   font-weight: 300;
