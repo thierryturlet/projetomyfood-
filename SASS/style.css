@@ -354,7 +354,7 @@ h1 {
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
-    border-top-color: red;
+    border-top-color: #f00;
     border-bottom-color: red;
   }
   25% {
@@ -466,7 +466,6 @@ ul li {
   text-overflow: ellipsis;
   align-items: center;
   animation-duration: 3s;
-  animation-name: glissement;
   animation: fadeIn 3s ease-in-out forwards;
 }
 @keyframes fadeIn {
@@ -490,12 +489,12 @@ ul li {
   display: block;
 }
 .menucontent .description h3 {
-  font-size: 18px; /* Ajuste la taille si nécessaire */
+  font-size: 18px;
   padding-top: 15px;
 }
 .menucontent .description p {
-  padding-top: 3px; /* Ajuste l'espacement entre le titre et le sous-titre */
-  font-size: 14px; /* Ajuste la taille si nécessaire */
+  padding-top: 3px;
+  font-size: 14px;
 }
 
 .menu > h3 {
